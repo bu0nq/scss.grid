@@ -1,0 +1,29 @@
+@use "../../variables";
+
+@mixin column-end-4($is-class-column-end: variables.$is-class-column-end, $is-data-column-end: variables.$is-data-column-end) {
+  @if $is-class-column-end {
+    @include class-column-end-4 {
+      @content;
+    }
+  }
+
+  @if $is-data-column-end {
+    @include data-column-end-4 {
+      @content;
+    }
+  }
+}
+
+@mixin class-column-end-4 {
+  &_grid-column-end-4 {
+    grid-column-end: 5;
+    @content;
+  }
+}
+
+@mixin data-column-end-4 {
+  &[data-grid-column-end="4"] {
+    grid-column-end: 5;
+    @content;
+  }
+}
