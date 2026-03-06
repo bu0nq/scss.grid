@@ -15,7 +15,7 @@
 }
 
 @mixin class-column-start-8 {
-  &_grid-column-start-8 {
+  &.grid-column-start-8 {
     grid-column-start: 8;
     @content;
   }
