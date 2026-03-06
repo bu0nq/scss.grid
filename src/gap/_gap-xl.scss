@@ -1,0 +1,27 @@
+@use "../../variables";
+
+@mixin gap-xl($is-class-gap: variables.$is-class-gap, $is-data-gap: variables.$is-data-gap) {
+  @if $is-class-gap {
+    @include class-gap-xl {
+      @content;
+    }
+  }
+
+  @if $is-data-gap {
+    @include data-gap-xl {
+      @content;
+    }
+  }
+}
+
+@mixin class-gap-xl {
+  &_grid-gap-xl {
+    @content;
+  }
+}
+
+@mixin data-gap-xl {
+  &[data-grid-gap="xl"] {
+    @content;
+  }
+}
