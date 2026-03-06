@@ -1,0 +1,27 @@
+@use "../../variables";
+
+@mixin column-gap-lg($is-class-column-gap: variables.$is-class-column-gap, $is-data-column-gap: variables.$is-data-column-gap) {
+  @if $is-class-column-gap {
+    @include class-column-gap-lg {
+      @content;
+    }
+  }
+
+  @if $is-data-column-gap {
+    @include data-column-gap-lg {
+      @content;
+    }
+  }
+}
+
+@mixin class-column-gap-lg {
+  &_grid-column-gap-lg {
+    @content;
+  }
+}
+
+@mixin data-column-gap-lg {
+  &[data-grid-column-gap="lg"] {
+    @content;
+  }
+}
