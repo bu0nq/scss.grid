@@ -15,7 +15,7 @@
 }
 
 @mixin class-columns-11 {
-  &_grid-columns-11 {
+  &.grid-columns-11 {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     @content;
