@@ -15,7 +15,7 @@
 }
 
 @mixin class-row-end-8 {
-  &_grid-row-end-8 {
+  &.grid-row-end-8 {
     grid-row-end: 9;
     @content;
   }
