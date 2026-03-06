@@ -1,0 +1,27 @@
+@use "../../variables";
+
+@mixin column-gap-sm($is-class-column-gap: variables.$is-class-column-gap, $is-data-column-gap: variables.$is-data-column-gap) {
+  @if $is-class-column-gap {
+    @include class-column-gap-sm {
+      @content;
+    }
+  }
+
+  @if $is-data-column-gap {
+    @include data-column-gap-sm {
+      @content;
+    }
+  }
+}
+
+@mixin class-column-gap-sm {
+  &_grid-column-gap-sm {
+    @content;
+  }
+}
+
+@mixin data-column-gap-sm {
+  &[data-grid-column-gap="sm"] {
+    @content;
+  }
+}
