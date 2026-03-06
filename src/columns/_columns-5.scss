@@ -1,0 +1,31 @@
+@use "../../variables";
+
+@mixin columns-5($is-class-columns: variables.$is-class-columns, $is-data-columns: variables.$is-data-columns) {
+  @if $is-class-columns {
+    @include class-columns-5 {
+      @content;
+    }
+  }
+
+  @if $is-data-columns {
+    @include data-columns-5 {
+      @content;
+    }
+  }
+}
+
+@mixin class-columns-5 {
+  &_grid-columns-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @content;
+  }
+}
+
+@mixin data-columns-5 {
+  &[data-grid-columns="5"] {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @content;
+  }
+}
