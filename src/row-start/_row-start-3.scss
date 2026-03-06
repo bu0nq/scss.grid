@@ -1,0 +1,29 @@
+@use "../../variables";
+
+@mixin row-start-3($is-class-row-start: variables.$is-class-row-start, $is-data-row-start: variables.$is-data-row-start) {
+  @if $is-class-row-start {
+    @include class-row-start-3 {
+      @content;
+    }
+  }
+
+  @if $is-data-row-start {
+    @include data-row-start-3 {
+      @content;
+    }
+  }
+}
+
+@mixin class-row-start-3 {
+  &_grid-row-start-3 {
+    grid-row-start: 3;
+    @content;
+  }
+}
+
+@mixin data-row-start-3 {
+  &[data-grid-row-start="3"] {
+    grid-row-start: 3;
+    @content;
+  }
+}
