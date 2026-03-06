@@ -1,0 +1,29 @@
+@use "../../variables";
+
+@mixin row-end-6($is-class-row-end: variables.$is-class-row-end, $is-data-row-end: variables.$is-data-row-end) {
+  @if $is-class-row-end {
+    @include class-row-end-6 {
+      @content;
+    }
+  }
+
+  @if $is-data-row-end {
+    @include data-row-end-6 {
+      @content;
+    }
+  }
+}
+
+@mixin class-row-end-6 {
+  &_grid-row-end-6 {
+    grid-row-end: 7;
+    @content;
+  }
+}
+
+@mixin data-row-end-6 {
+  &[data-grid-row-end="6"] {
+    grid-row-end: 7;
+    @content;
+  }
+}
