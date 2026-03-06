@@ -1,6 +1,6 @@
 @use "../../variables";
 
-@mixin column-end-1($is-class-row-end: variables.$is-class-row-end, $is-data-row-end: variables.$is-data-row-end) {
+@mixin row-end-1($is-class-row-end: variables.$is-class-row-end, $is-data-row-end: variables.$is-data-row-end) {
   @if $is-class-row-end {
     @include class-row-end-1 {
       @content;
