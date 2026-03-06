@@ -15,13 +15,15 @@
 }
 
 @mixin class-gap-lg {
-  &_grid-gap-lg {
+  &.grid-gap-lg {
+    display: grid;
     @content;
   }
 }
 
 @mixin data-gap-lg {
   &[data-grid-gap="lg"] {
+    display: grid;
     @content;
   }
 }
