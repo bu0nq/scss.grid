@@ -15,7 +15,7 @@
 }
 
 @mixin class-row-start-5 {
-  &_grid-row-start-5 {
+  &.grid-row-start-5 {
     grid-row-start: 5;
     @content;
   }
