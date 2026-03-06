@@ -15,13 +15,15 @@
 }
 
 @mixin class-row-gap-xxl {
-  &_grid-row-gap-xxl {
+  &.grid-row-gap-xxl {
+    display: grid;
     @content;
   }
 }
 
 @mixin data-row-gap-xxl {
   &[data-grid-row-gap="xxl"] {
+    display: grid;
     @content;
   }
 }
