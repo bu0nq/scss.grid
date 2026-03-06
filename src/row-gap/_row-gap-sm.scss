@@ -15,13 +15,15 @@
 }
 
 @mixin class-row-gap-sm {
-  &_grid-row-gap-sm {
+  &.grid-row-gap-sm {
+    display: grid;
     @content;
   }
 }
 
 @mixin data-row-gap-sm {
   &[data-grid-row-gap="sm"] {
+    display: grid;
     @content;
   }
 }
