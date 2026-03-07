@@ -1,0 +1,31 @@
+@use "../../variables";
+
+@mixin rows-12($is-class-rows: variables.$is-class-rows, $is-data-rows: variables.$is-data-rows) {
+  @if $is-class-rows {
+    @include class-rows-12 {
+      @content;
+    }
+  }
+
+  @if $is-data-rows {
+    @include data-rows-12 {
+      @content;
+    }
+  }
+}
+
+@mixin class-rows-12 {
+  &.grid-rows-12 {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    @content;
+  }
+}
+
+@mixin data-rows-12 {
+  &[data-grid-rows="12"] {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    @content;
+  }
+}
