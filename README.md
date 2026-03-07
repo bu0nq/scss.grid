@@ -26,19 +26,21 @@ or
 @use "@bu0nq/scss.mixin.grids/variables" with (
     $is-class: true,
     $is-class-columns: $is-class,
+    $is-class-rows: $is-class,
+    $is-class-gap: $is-class,
     $is-class-column-start: $is-class,
     $is-class-column-end: $is-class,
     $is-class-column-gap: $is-class,
-    $is-class-gap: $is-class,
     $is-class-row-start: $is-class,
     $is-class-row-end: $is-class,
     $is-class-row-gap: $is-class,
     $is-data: true,
     $is-data-columns: $is-data,
+    $is-data-rows: $is-data,
+    $is-data-gap: $is-data,
     $is-data-column-start: $is-data,
     $is-data-column-end: $is-data,
     $is-data-column-gap: $is-data,
-    $is-data-gap: $is-data,
     $is-data-row-start: $is-data,
     $is-data-row-end: $is-data,
     $is-data-row-gap: $is-data,
@@ -65,6 +67,25 @@ Mixins for changing the `columns` of a block or element.
 | columns-10 | class-columns-10<br/>data-columns-10 | .grid-columns-10 | data-grid-columns="10" |
 | columns-11 | class-columns-11<br/>data-columns-11 | .grid-columns-11 | data-grid-columns="11" |
 | columns-12 | class-columns-12<br/>data-columns-12 | .grid-columns-12 | data-grid-columns="12" |
+
+### Rows
+
+Mixins for changing the `rows` of a block or element.
+
+| Mixin Name | Additional mixins              | Class         | Data                |
+|------------|--------------------------------|---------------|---------------------|
+| rows-1     | class-rows-1<br/>data-rows-1   | .grid-rows-1  | data-grid-rows="1"  |
+| rows-2     | class-rows-2<br/>data-rows-2   | .grid-rows-2  | data-grid-rows="2"  |
+| rows-3     | class-rows-3<br/>data-rows-3   | .grid-rows-3  | data-grid-rows="3"  |
+| rows-4     | class-rows-4<br/>data-rows-4   | .grid-rows-4  | data-grid-rows="4"  |
+| rows-5     | class-rows-5<br/>data-rows-5   | .grid-rows-5  | data-grid-rows="5"  |
+| rows-6     | class-rows-6<br/>data-rows-6   | .grid-rows-6  | data-grid-rows="6"  |
+| rows-7     | class-rows-7<br/>data-rows-7   | .grid-rows-7  | data-grid-rows="7"  |
+| rows-8     | class-rows-8<br/>data-rows-8   | .grid-rows-8  | data-grid-rows="8"  |
+| rows-9     | class-rows-9<br/>data-rows-9   | .grid-rows-9  | data-grid-rows="9"  |
+| rows-10    | class-rows-10<br/>data-rows-10 | .grid-rows-10 | data-grid-rows="10" |
+| rows-11    | class-rows-11<br/>data-rows-11 | .grid-rows-11 | data-grid-rows="11" |
+| rows-12    | class-rows-12<br/>data-rows-12 | .grid-rows-12 | data-grid-rows="12" |
 
 ### Gap
 
